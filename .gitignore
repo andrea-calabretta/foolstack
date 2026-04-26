@@ -46,3 +46,12 @@ Thumbs.db
 .claude/worktrees
 .claude/settings.local.json
 .nx/polygraph
+test-output
+
+.angular
+
+__screenshots__/
+
+# Environment variables
+.env
+.env.local
