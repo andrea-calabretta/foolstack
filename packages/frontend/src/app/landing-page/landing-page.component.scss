@@ -1,0 +1,199 @@
+// ── Local SCSS variables ─────────────────────────────────────
+$accent:       #1D9E75;
+$accent-hover: #22b989;
+$bg:           #0c0c0c;
+$surface:      #141414;
+$border:       #1e1e1e;
+$text:         #f0f0f0;
+$text-muted:   #888888;
+
+// ── Navbar ───────────────────────────────────────────────────
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba($bg, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $border;
+
+  &__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  &__logo-accent {
+    color: $accent;
+  }
+
+  &__cta {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $text-muted;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $text;
+    }
+  }
+}
+
+// ── Hero ─────────────────────────────────────────────────────
+.hero {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+
+  &__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 24px;
+  }
+
+  &__eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    color: $text;
+    margin-bottom: 24px;
+  }
+
+  &__title-accent {
+    color: $accent;
+  }
+
+  &__subtitle {
+    font-size: 1.1rem;
+    color: $text-muted;
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+}
+
+// ── CTA Button ───────────────────────────────────────────────
+.btn-primary {
+  display: inline-block;
+  background-color: $accent;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.15s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $accent-hover;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// ── Curriculum ───────────────────────────────────────────────
+.curriculum {
+  padding: 100px 0;
+  border-top: 1px solid $border;
+
+  &__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  &__title {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    color: $text-muted;
+    font-size: 1rem;
+    margin-bottom: 56px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 560px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// ── Module Card ──────────────────────────────────────────────
+.module-card {
+  background-color: $surface;
+  border: 1px solid $border;
+  border-radius: 12px;
+  padding: 28px;
+  transition: border-color 0.2s, transform 0.2s;
+
+  &:hover {
+    border-color: rgba($accent, 0.4);
+    transform: translateY(-2px);
+  }
+
+  &__number {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: $accent;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $text;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  &__description {
+    font-size: 0.875rem;
+    color: $text-muted;
+    line-height: 1.6;
+  }
+}
+
+// ── Footer ───────────────────────────────────────────────────
+.footer {
+  border-top: 1px solid $border;
+  padding: 32px 24px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: $text-muted;
+}

@@ -1,0 +1,45 @@
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar__inner">
+    <span class="navbar__logo">foolstack<span class="navbar__logo-accent">.tech</span></span>
+    <a href="#curriculum" class="navbar__cta">Il programma</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero__inner">
+    <p class="hero__eyebrow">Corso online · Angular + NestJS</p>
+    <h1 class="hero__title">
+      Da zero a full-stack developer<br />
+      con <span class="hero__title-accent">Angular</span> e <span class="hero__title-accent">NestJS</span>
+    </h1>
+    <p class="hero__subtitle">
+      Un percorso pratico end-to-end: costruisci una vera applicazione full-stack
+      mentre impari i pattern usati in produzione.
+    </p>
+    <a href="#" class="btn-primary">Accedi al corso &mdash; &euro;97</a>
+  </div>
+</section>
+
+<!-- Curriculum -->
+<section class="curriculum" id="curriculum">
+  <div class="curriculum__inner">
+    <h2 class="curriculum__title">Il programma</h2>
+    <p class="curriculum__subtitle">6 moduli per passare dal setup iniziale al deploy in produzione.</p>
+    <div class="curriculum__grid">
+      @for (mod of modules; track mod.number) {
+        <div class="module-card">
+          <span class="module-card__number">{{ mod.number }}</span>
+          <h3 class="module-card__title">{{ mod.title }}</h3>
+          <p class="module-card__description">{{ mod.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 foolstack.tech &mdash; Tutti i diritti riservati</p>
+</footer>
